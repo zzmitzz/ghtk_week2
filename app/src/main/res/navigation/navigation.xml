@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment"
+    >
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ghtk_intern_week2.ui.screen.HomeFragment"
+        android:label="Home Page"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_page2Fragment"
+            app:destination="@id/page2Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_page1Fragment"
+            app:destination="@id/page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.example.ghtk_intern_week2.ui.screen.Fragment1"
+        android:label="Exercise 1"
+        tools:layout="@layout/fragment1">
+    </fragment>
+    <fragment
+        android:id="@+id/page2Fragment"
+        android:name="com.example.ghtk_intern_week2.ui.screen.Fragment2"
+        android:label="Exercise 2"
+        tools:layout="@layout/fragment2">
+    </fragment>
+
+</navigation>

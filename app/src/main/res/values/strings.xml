@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GHTK_Intern_Week2</string>
+    <string name="exercise_1_count_frequent_characters">Exercise 1: Count frequent characters</string>
+    <string name="exercise_2_point_inside_triangle">Exercise 2: Point inside triangle</string>
+</resources>
