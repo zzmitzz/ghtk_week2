@@ -1,22 +1,7 @@
 ## Screenshots
 
-![Home Page](https://i.postimg.cc/Snw689Sn/Homepage.png)
-
-**Home Page**
-
-
-![Ex1](https://i.postimg.cc/fVFKKFKT/exercise1.png)
-
-**Exercise 1**
-
-![Ex2](https://i.postimg.cc/6yWY5Cqw/ex2-1.png)
-
-**Exercise 2** 
-
-![Ex2.Yes](https://i.postimg.cc/GBGkjptq/ex2-2.png)
-
-**Exercise 2 - Yes** 
-
-![Ex2.No](https://i.postimg.cc/jwTy3rJK/ex2-3.png  )
-
-**Exercise 2 - No**
+<a href="https://freeimage.host/i/dqfGdCu"><img src="https://iili.io/dqfGdCu.md.png" alt="dqfGdCu.md.png" border="0"></a>
+<a href="https://freeimage.host/i/dqfE6hX"><img src="https://iili.io/dqfE6hX.md.png" alt="dqfE6hX.md.png" border="0"></a>
+<a href="https://freeimage.host/i/dqfEbv2"><img src="https://iili.io/dqfEbv2.md.png" alt="dqfEbv2.md.png" border="0"></a>
+<a href="https://freeimage.host/i/dqfG34j"><img src="https://iili.io/dqfG34j.md.png" alt="dqfG34j.md.png" border="0"></a>
+<a href="https://freeimage.host/i/dqfG2Eb"><img src="https://iili.io/dqfG2Eb.md.png" alt="dqfG2Eb.md.png" border="0"></a>
