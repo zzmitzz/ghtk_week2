@@ -38,7 +38,7 @@ class Fragment1 : BaseFragment<MainViewModel>() {
         initialRecycleView(listResult)
     }
     override fun initListener() {
-        binding.run {
+        binding.apply {
             button.setOnClickListener{
                 inputString = binding.editText.text.toString()
                 if(inputString.isNotEmpty()){

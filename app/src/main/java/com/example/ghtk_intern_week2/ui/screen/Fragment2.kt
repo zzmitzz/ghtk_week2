@@ -34,9 +34,8 @@ class Fragment2 : BaseFragment<MainViewModel>() {
     }
     override fun initListener() {
         binding.check.setOnClickListener{
-            if(checkAllPoint()){
+            if(checkAllPointsAvailable()){
                 viewModel.apply {
-                    // Not yet handle the case that these points is not distinct
                     pointInsideTriangle(checkPoint, point1, point2, point3)
                 }
             }
@@ -60,30 +59,21 @@ class Fragment2 : BaseFragment<MainViewModel>() {
     override fun initViewModel() {
         viewModel = ViewModelProvider(this, ViewModelFactory())[MainViewModel::class.java]
     }
-    private fun checkAllPoint(): Boolean{
+    private fun checkAllPointsAvailable(): Boolean{
         binding.run {
-            var px1 = px1.text.convertToDouble()
-            var py1 = py1.text.convertToDouble()
-            var px2 = px2.text.convertToDouble()
-            var py2 = py2.text.convertToDouble()
-            var px3 = px3.text.convertToDouble()
-            var py3 = py3.text.convertToDouble()
-            var qx = px4.text.convertToDouble()
-            var qy = py4.text.convertToDouble()
-            Log.d("checkAllPoint", "$px1, $py1, $px2, $py2, $px3, $py3, $qx, $qy")
-            if (listOf(px1, py1, px2, py2, px3, py3, qx, qy).all { it != null }) {
-                this@Fragment2.point1 = Point(px1, py1)
-                this@Fragment2.point2 = Point(px2,py2)
-                this@Fragment2.point3 = Point(px3,py3)
-                this@Fragment2.checkPoint = Point(qx,qy)
-
-            } else {
-                return false
+            val inputPoints = listOf(px1, py1, px2, py2, px3, py3, px4, py4)
+            val points = inputPoints.mapNotNull { it.text.convertToDouble() }
+            if (points.size == 8) {
+                this@Fragment2.apply {
+                    point1 = Point(points[0], points[1])
+                    point2 = Point(points[2], points[3])
+                    point3 = Point(points[4], points[5])
+                    checkPoint = Point(points[6], points[7])
+                }
+                return true
             }
-
-
+            return false
         }
-        return true
     }
 
 }

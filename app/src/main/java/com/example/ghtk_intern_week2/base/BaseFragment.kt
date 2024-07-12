@@ -9,9 +9,6 @@ import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<VM: ViewModel>: Fragment() {
-//    private val activity by lazy {
-//        getActivity()
-//    }
     lateinit var viewModel : VM
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
