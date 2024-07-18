@@ -65,7 +65,9 @@ class AccountFragment : BaseFragment<AccountViewModel>() {
         }
     }
     override fun observeLiveData() {
-
+        viewModel.userName.observe(this@AccountFragment){
+            binding.name.text =  it
+        }
     }
 
     override fun initViewModel() {

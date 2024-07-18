@@ -16,6 +16,7 @@ import kotlinx.coroutines.withContext
 class AccountViewModel(val userRepositoryImpl: UserRepositoryImpl) : BaseViewModel() {
     private var result : Response? = null
     private var _historyList : MutableLiveData<List<History>> = MutableLiveData()
+    var userName: MutableLiveData<String> = MutableLiveData()
 
     public val historyList : LiveData<List<History>>
         get() = _historyList
@@ -25,6 +26,7 @@ class AccountViewModel(val userRepositoryImpl: UserRepositoryImpl) : BaseViewMod
             withContext(Dispatchers.IO){
                 result  = userRepositoryImpl.getProfileInformation()
                 _historyList.postValue(result?.history)
+                userName.postValue(result?.fullName)
                 delay(1500)
             }
             hideLoadingDialog()
