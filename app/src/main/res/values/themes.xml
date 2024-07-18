@@ -5,5 +5,8 @@
          <item name="colorPrimary">@color/appbar</item>
     </style>
 
-    <style name="Theme.GHTK_Intern_Week2" parent="Base.Theme.GHTK_Intern_Week2" />
+    <style name="Theme.GHTK_Intern_Week2" parent="Base.Theme.GHTK_Intern_Week2">
+        <item name="colorOnPrimary">@color/appbar</item>
+    </style>
+    
 </resources>

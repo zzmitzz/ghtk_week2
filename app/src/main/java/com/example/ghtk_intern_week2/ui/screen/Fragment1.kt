@@ -2,6 +2,7 @@ package com.example.ghtk_intern_week2.ui.screen
 
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,7 @@ class Fragment1 : BaseFragment<MainViewModel>() {
 
     override fun initViewModel() {
         viewModel = ViewModelProvider(this, ViewModelFactory())[MainViewModel::class.java]
+        Log.d("TAG", "Fragment initViewModel: ${viewModel.hashCode()}")
     }
     private fun initialRecycleView(map : MutableMap<Char,Int>){
         charAdapter = CharAdapter()

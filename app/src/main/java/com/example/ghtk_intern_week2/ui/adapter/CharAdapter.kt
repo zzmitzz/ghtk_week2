@@ -24,7 +24,7 @@ class CharAdapter : RecyclerView.Adapter<CharAdapter.VH>() {
     inner class VH(var binding: ItemViewBinding) :
         RecyclerView.ViewHolder(binding.root){
         fun bind(a: Char){
-            binding.run {
+            binding.apply {
                 character.text = a.toString()
                 freq.text = list[a].toString()
             }

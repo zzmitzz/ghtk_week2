@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.ghtk_intern_week2.MainViewModel
 import com.example.ghtk_intern_week2.R
 import com.example.ghtk_intern_week2.base.BaseFragment
@@ -43,11 +44,15 @@ class Fragment2 : BaseFragment<MainViewModel>() {
                 Toast.makeText(context, "Please input all points", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.navigateBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_fragment2_to_fragmentDraw)
+        }
+
     }
 
     override fun observeLiveData() {
 
-        viewModel.exercise2.observe(viewLifecycleOwner) {
+        viewModel.exercise2.observe(this@Fragment2) {
             if(it){
                 binding.imageView.setImageResource(R.drawable.yes)
             }else{
